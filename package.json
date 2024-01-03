@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package",
   "name": "app_cli__project-name-generator",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Template for a Typescript application",
   "private": true,
   "author": "Dávid J. Zarándi",
