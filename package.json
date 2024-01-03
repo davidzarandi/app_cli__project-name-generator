@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package",
-  "name": "tmpl__typescript_application",
+  "name": "app_cli__project-name-generator",
   "version": "0.0.1",
   "description": "Template for a Typescript application",
   "private": true,
