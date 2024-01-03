@@ -1,23 +1,15 @@
 export const PROJECT_TYPE = {
-  APPLICATION: "app",
+  APPLICATION_CLI: "app_cli",
+  APPLICATION_WEB: "app_web",
   LIBRARY: "lib",
-  WORKSHOP: "wshp",
+  WORKSHOP: "wksh",
   PROOF_OF_CONCEPT: "poc",
   TEMPLATE: "tmpl",
   LARGE_LANGUAGE_MODEL: "llm",
 } as const;
 
-export const APPLICATION_TYPE = {
-  WEB: "web",
-  CLI: "cli",
-} as const;
-
 export type ProjectType = typeof PROJECT_TYPE;
-export type ApplicationType = typeof APPLICATION_TYPE;
-
-export type ProjectName =
-  | `${ProjectType[Exclude<keyof ProjectType, "APPLICATION">]}__${string}`
-  | `${ProjectType["APPLICATION"]}_${ApplicationType[keyof ApplicationType]}__${string}`;
+export type ProjectName = `${ProjectType[keyof ProjectType]}__${string}`;
 
 type _tests = [
   Expect<
@@ -28,7 +20,7 @@ type _tests = [
       | `lib__${string}`
       | `poc__${string}`
       | `tmpl__${string}`
-      | `wshp__${string}`
+      | `wksh__${string}`
       | `llm__${string}`
     >
   >,
