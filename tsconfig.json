@@ -10,7 +10,7 @@
     "esModuleInterop": true,
     "moduleResolution": "nodenext",
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
   "exclude": ["node_modules"]
 }

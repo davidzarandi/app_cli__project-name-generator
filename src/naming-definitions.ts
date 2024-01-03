@@ -1,4 +1,4 @@
-export const PREFIX = {
+export const PROJECT_TYPE = {
   APPLICATION: "app",
   LIBRARY: "lib",
   WORKSHOP: "wshp",
@@ -12,12 +12,12 @@ export const APPLICATION_TYPE = {
   CLI: "cli",
 } as const;
 
-export type Prefix = typeof PREFIX;
+export type ProjectType = typeof PROJECT_TYPE;
 export type ApplicationType = typeof APPLICATION_TYPE;
 
 export type ProjectName =
-  | `${Prefix[Exclude<keyof Prefix, "APPLICATION">]}__${string}`
-  | `${Prefix["APPLICATION"]}_${ApplicationType[keyof ApplicationType]}__${string}`;
+  | `${ProjectType[Exclude<keyof ProjectType, "APPLICATION">]}__${string}`
+  | `${ProjectType["APPLICATION"]}_${ApplicationType[keyof ApplicationType]}__${string}`;
 
 type _tests = [
   Expect<
