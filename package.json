@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "npm run clean && tsc",
-    "start": "node --env-file=.env dist/index.js",
+    "start": "node --env-file=.env dist/main.js",
     "test": "npm run build && node --test dist/**/*.test.js",
     "sonar": "sonarlint --src 'src/**/*.ts'",
     "format": "prettier --write .",
